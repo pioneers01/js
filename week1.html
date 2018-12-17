@@ -1,0 +1,159 @@
+##1
+var a = /*13*/
+31
+结果是？   a=31
+
+##2
+var a = 0;
+if(a>0) 
+  console.log(a); 
+  console.log(a+a);
+输出结果是？   0(来自a+a)
+
+##3
+var a = 3;
+if(a=1) {
+    console.log(a);
+}
+输出结果是？    1
+
+##4
+console.log(3)
+console.log(3);
+上面哪个不能正常执行？    都可以执行，js可以省略；但是通常要求写上   
+
+##5
+console.log(a);
+var a = 3;
+输出结果是？            undefined(var会预先加载留位置，但赋值是执行到本行才赋值)
+
+##6
+var a = 3;
+这个可以拆成哪两部分？  var a; a=3;
+
+##7
+a = 3; 
+console.log(a);       不会报错，单是通常要写var，不然不知道什么时候就创建了全局变量
+会报错吗？
+
+##8
+var a = 1, b= 2；
+会报错吗？             不会，可以一次声明多个变量
+
+##9
+var $Hi = 1;          
+var _0_ = 1;		  
+var $_0 = 1;
+var $ = 1;
+var _ = 1;
+var 0_0 = 1; 
+var $84757 = 1;
+哪个能不报错？        var 0_0 = 1;变量名不能以数字开头
+
+##10
+var 
+a 
+
+
+
+= 
+
+36;
+var b = 6;
+console.log(a-b);
+输出结果是什么？       30
+
+##11
+if(amountOfApple > 0){
+    console.log('We have apple');
+}else{
+    console.log('Buy more apples');
+}
+三元运算符（?:）的写法重写上面   
+(amountOfApple > 0)?console.log('We have apple'):console.log('Buy more apples');
+
+##12
+var a = 1;
+a = '12';
+a = false;
+console.log(a);      
+输出什么？              false
+
+##13
+for(var n = 1; n<10; n=n+1){
+
+}
+console.log(n);      
+输出什么？              10(不理解i为什么在for之外也有值)
+
+##14
+for(var n = 0; n<=10; n++){
+
+}
+console.log(n);
+输出什么？             11
+
+##15
+0.1 + 0.2 === 0.3 // 返回true还是false？      false(不理解)
+
+##16
+var a = parseInt("      3123123123xiaokeai");
+console.log(a);
+输出什么？             3123123123
+
+##17
+var a = parseInt('0100xiaokeai0', 2);
+console.log(a);
+输出什么？                  4
+
+
+##18 
+var a = parseFloat('        3.14more non-digit characters'); 
+console.log(a);
+输出什么？             3.14
+
+##19
+var a = parseFloat('   1.15  11086   3.14more non-digit characters');
+console.log(a);
+输出什么？             1.15
+
+##20
+console.log('\u007A'.length);
+输出什么？           1（第一次见这种字符）
+
+#21
+var obj = {
+    '3+3': 'A',
+    '6': 'B'
+};
+console.log(obj[3+3]);
+console.log(obj["3+3"]);
+输出什么？         B     A(obj[6]和obj["6"]有什么区别呢？ )
+
+##22 
+var obj1 = {"a": 1};
+var obj2 = {"a": 1};
+console.log(obj1 === obj2);
+输出什么？            flase
+
+##23  
+数组是一种对象吗？      是的
+
+##24
+var arr = [1, 2, 3];
+console.log(arr[0]);   
+输出什么？                 1
+ 
+##25
+var arr = [1, 2, 3];
+console.log(arr['0']);
+输出什么？               1（不理解）
+
+##26
+var arr = [1, 2, 3];
+console.log(arr.0);
+输出什么？                 报错
+
+##27
+有哪些值是Falsey值？
+0，false，undfined，null NaN  “”
